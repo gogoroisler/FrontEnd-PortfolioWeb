@@ -10,7 +10,7 @@ import { persona } from '../model/persona.model';
 
 /*desde donde toma el front la base de datos la informacion*/
 export class PersonaService {
-  URL='http://localhost:8080/personas/';
+  URL='https://backend-portfolio-web-sgr.herokuapp.com/personas/';
 
 /**constructor del servicio toma el metodo de netbeans */
   constructor(private http: HttpClient) { }
