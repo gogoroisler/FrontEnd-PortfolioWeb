@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  URL = "https://backend-portfolio-web-sgr.herokuapp.com/proyecto/"
+  URL = 'http://localhost:8080/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class ProyectoService {
   }
 
   public detail(id:number): Observable<Proyecto>{
-    return this.httpClient.get<Proyecto>(this.URL+ "detail/${id}");
+    return this.httpClient.get<Proyecto>(this.URL+ `detail/${id}`);
   }
 
   public save(educacion:Proyecto): Observable<any>{
@@ -25,11 +25,11 @@ export class ProyectoService {
   }
 
   public update(id: number, proyecto: Proyecto): Observable<any>{
-    return this.httpClient.put<any>(this.URL+"update/${id}", proyecto);
+    return this.httpClient.put<any>(this.URL+`update/${id}`, proyecto);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL+"delete/${id}");
+    return this.httpClient.delete<any>(this.URL+`delete/${id}`);
   }
 
 }

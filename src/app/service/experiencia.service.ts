@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'https://backend-portfolio-web-sgr.herokuapp.com/explaboral/'
+  expURL = 'http://localhost:8080/explaboral/'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -29,6 +29,6 @@ export class SExperienciaService {
   }
 
   public delete(id:number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `detail/${id}`);
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
   }
 }

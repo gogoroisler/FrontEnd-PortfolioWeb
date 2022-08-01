@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class SobreMiComponent implements OnInit {
   //**declaracion de persona que referencia el modelo que creamos anteriormente */
-  persona: persona =  new persona("","","");
+  persona: persona =  new persona("","","","","");
 
   //**Constructor referencia el servicio persona que creamos anteriormente*/
   constructor(public personaService: PersonaService) { }
