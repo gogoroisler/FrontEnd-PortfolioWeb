@@ -19,6 +19,10 @@ width: 150px;
 img{
   width: 50px;
 }
+#red{
+  background-color: #313131;
+  border:#313131;
+}
 
 /*---Celular---*/
 @media (max-width: 575px) {
